@@ -46,9 +46,15 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`Account_ID`, `FName`, `LName`, `TelephoneNum`, `Start_date`, `Address`, `Email`, `Password`, `ROLE_NO`, `Deleted`, `Image`) VALUES
-(1, 'Nguyen', 'Tien', '0923236277', '2023-01-01 00:00:01', 'HCMUT', 'admin@gmail.com', '25f9e794323b453885f5181f1b624d0b', 1, 0, NULL),
-(2, 'Nguyen', 'Tien1', '0023236277', '2023-01-01 00:00:02', 'HCMUT', 'staff1@gmail.com', '25f9e794323b453885f5181f1b624d0b', 2, 0, NULL)
-(3, 'Nguyen', 'Tien2', '0923236277', '2023-01-01 00:00:02', 'HCMUT', 'staff2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 3, 0, NULL);
+(18, 'tien', 'nguyen', '0904473064', '2022-12-02 13:42:36', '323, Pham Van Chieu, P14, Go Vap, TPHCM', '123@gmail.com', '1f2f7b6c22218522f8cb879939b5ed37', 4, 0, NULL),
+(19, 'Tien', 'Nguyen', '0923236277', '2022-12-02 13:47:20', '323, Pham Văn Chiêu', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 0, NULL),
+(22, 'Tien2', 'Nguyen', '0913704201', '2022-12-02 14:33:55', '323, Ly ThuonG kiet', 'staff1@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 3, 0, NULL),
+(34, 'Tien3', 'Nguyen', '0998876678', '2022-12-04 03:52:27', '66, Lê tèo, hcm', 'staff2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 2, 0, NULL),
+(28, 'Quyen', 'Tuan', '0117773889', '2022-12-04 22:18:05', 'Quan 1, Ho Chi Minh', 'quyen@gmail.com', '1b8d23600288e0277850eea3d7ec13ca', 4, 0, NULL),
+(31, 'Khang', 'Phan', '03730154', '2022-12-05 20:27:05', 'Kí túc xá khu C', 'khang@gmail.com.vn', '0e3367240684e2463cbe0daa0362138d', 4, 0, 'author-1.jpg'),
+(32, 'Quyen', 'Hiiii', '0373015428', '2022-12-13 01:37:05', NULL, 'quyen1@gmail.com', '25d55ad283aa400af464c76d713c07ad', 4, 0, NULL),
+(33, 'Duc', 'Huynh', '0373015428', '2022-12-13 11:47:56', NULL, 'duc@gmail.comm', '0e3367240684e2463cbe0daa0362138d', 4, 0, NULL);
+
 
 -- --------------------------------------------------------
 
@@ -450,9 +456,9 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`Created_date`, `ACCID`, `Product_ID`, `Content`, `Rating`, `ID`) VALUES
-('2022-12-04 03:52:52', 26, 13, 'Sách dở ẹc', 1, 3),
-('2022-12-04 18:24:50', 18, 18, 'sách ko hay lắm', 3, 7),
-('2022-12-04 20:47:52', 18, 27, 'Greatest book of the year', 5, 8),
+('2022-12-04 03:52:52', 28, 13, 'Sách dở ẹc', 1, 3),
+('2022-12-04 18:24:50', 28, 18, 'sách ko hay lắm', 3, 7),
+('2022-12-04 20:47:52', 28, 27, 'Greatest book of the year', 5, 8),
 ('2022-12-11 10:57:08', 31, 13, 'aaa', 3, 10),
 ('2022-12-13 01:38:39', 32, 24, 'cuốn sách hay', 5, 11),
 ('2022-12-13 10:11:50', 31, 17, 'hay day', 1, 12),
