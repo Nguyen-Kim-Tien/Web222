@@ -47,8 +47,8 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`Account_ID`, `FName`, `LName`, `TelephoneNum`, `Start_date`, `Address`, `Email`, `Password`, `ROLE_NO`, `Deleted`, `Image`) VALUES
 (18, 'tien', 'nguyen', '0904473064', '2022-12-02 13:42:36', '323, Pham Van Chieu, P14, Go Vap, TPHCM', '123@gmail.com', '1f2f7b6c22218522f8cb879939b5ed37', 4, 0, NULL),
-(19, 'Tien', 'Nguyen', '0923236277', '2022-12-02 13:47:20', '323, Pham Văn Chiêu', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 0, NULL),
-(22, 'Tien2', 'Nguyen', '0913704201', '2022-12-02 14:33:55', '323, Ly ThuonG kiet', 'staff1@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 3, 0, NULL),
+(19, 'Tien', 'Nguyen', '0923236277', '2022-12-02 13:47:20', '323, Pham Văn Chiêu', 'admin@gmail.com', '25f9e794323b453885f5181f1b624d0b', 1, 0, NULL),
+(22, 'Tien2', 'Nguyen', '0913704201', '2022-12-02 14:33:55', '323, Ly ThuonG kiet', 'staff1@gmail.com', '25f9e794323b453885f5181f1b624d0b', 3, 0, NULL),
 (34, 'Tien3', 'Nguyen', '0998876678', '2022-12-04 03:52:27', '66, Lê tèo, hcm', 'staff2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 2, 0, NULL),
 (28, 'Quyen', 'Tuan', '0117773889', '2022-12-04 22:18:05', 'Quan 1, Ho Chi Minh', 'quyen@gmail.com', '1b8d23600288e0277850eea3d7ec13ca', 4, 0, NULL),
 (31, 'Khang', 'Phan', '03730154', '2022-12-05 20:27:05', 'Kí túc xá khu C', 'khang@gmail.com.vn', '0e3367240684e2463cbe0daa0362138d', 4, 0, 'author-1.jpg'),
