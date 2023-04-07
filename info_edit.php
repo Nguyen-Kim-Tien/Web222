@@ -175,18 +175,18 @@ if(isset($_POST['submit'])){
 <style>.pers-img{display:flex;justify-content:center;align-content:center;height:22rem;width:100%;background-color:#f5f5f5;}.pers-img>img{;margin-top:2rem;border:2px solid black;border-radius:0.5rem;}.pers-img>p,.pers-img>i{;margin-top:2rem;text-align:center;padding-top:8rem;padding-right:5rem;font-size:2rem;}</style>
 <div class="form-container">
    <form action="" method="POST" enctype="multipart/form-data">
-      <h3>Update account info</h3>
+      <h3>Cập nhật thông tin người dùng</h3>
       <input type="text" value="<?php echo $info['FName'];?>" name="FName" placeholder="<?php echo $info['FName'];?>" required class="box">
       <input type="text" value="<?php echo $info['LName'];?>" name="LName" placeholder="<?php echo $info['LName'];?>" required class="box">
       <input type="text" value="<?php echo $info['TelephoneNum'];?>" name="TelephoneNum" placeholder="<?php echo $info['TelephoneNum'];?>" required class="box">
       <input type="text" value="<?php echo $info['Address'];?>" name="Address" placeholder="<?php echo $info['Address'];?>"
       required class="box">
       <input type="text" value="<?php echo $info['Email'];?>" name="Email" placeholder="<?php echo $info['Email'];?>" required class="box">     
-      <input type="password" name="password" placeholder="enter new password" class="box">
-      <input type="password" name="cpassword" placeholder="confirm password" class="box">
-      <p style="text-align:left;font-size:small;padding:0;margin:0;">*choose your profile picture below</p>
+      <input type="password" name="password" placeholder="Nhập mật khẩu mới" class="box">
+      <input type="password" name="cpassword" placeholder="Xác nhận mật khẩu" class="box">
+      <p style="text-align:left;font-size:small;padding:0;margin:0;">*Chọn ảnh đại diện</p>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box">
-      <input type="submit" name="submit" value="change info" class="infobtn">
+      <input type="submit" name="submit" value="Lưu thay đổi" class="infobtn">
    </form>
 
 </div>

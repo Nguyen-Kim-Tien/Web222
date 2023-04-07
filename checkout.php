@@ -131,8 +131,8 @@ if(isset($_POST['order_btn'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>checkout</h3>
-   <p> <a href="home.php">HOME</a> / CHECKOUT </p>
+   <h3>Thanh toán</h3>
+  
 </div>
 
 <section class="display-order">
@@ -149,22 +149,22 @@ if(isset($_POST['order_btn'])){
    <?php
       }
    }else{
-      echo '<p class="empty">your cart is empty</p>';
+      echo '<p class="empty">Giỏ hàng của bạn đang trống</p>';
    }
    ?>
    <input style="display:none;" type="number" id="grand-total1" value="<?php echo $grand_total; ?>" style="width: 90px; border-radius: 0px"/>
-   <span style="display:flex; margin-top: 2rem; font-size: 2.5rem; color:var(--light-color); justify-content:center;">Total: $<input style="display:inline-block;color:var(--red); width:8%; background-color:transparent;" type="number" id="grand-total2" value="<?php echo $grand_total; ?>" disabled/></span>
+   <span style="display:flex; margin-top: 2rem; font-size: 2.5rem; color:var(--light-color); justify-content:center;">Tổng tiền: $<input style="display:inline-block;color:var(--red); width:8%; background-color:transparent;" type="number" id="grand-total2" value="<?php echo $grand_total; ?>" disabled/></span>
 </section>
 
 <section class="checkout">
 
    <form action="" method="post">
-      <h3>place your order</h3>
+      <h3>Đơn hàng của bạn</h3>
       <div class="flex">
       <div class="inputBox">
             <span>Voucher :</span>
             <select name="voucher" id="discount" required>
-               <option value="0" data-discount="0">No voucher added</option>
+               <option value="0" data-discount="0">Không có voucher nào được chọn</option>
                <?php
                $vourcher=mysqli_query($conn,"SELECT * FROM `discount_code` where ACC_ID=$user_id AND DATEDIFF(Expiration_date,CURDATE()) >= 0 AND Deleted=0");
                if(mysqli_num_rows($vourcher)>0) {
@@ -179,16 +179,16 @@ if(isset($_POST['order_btn'])){
          </div>
 
          <div class="inputBox">
-            <span>Payment Method :</span>
+            <span>Phương thức thanh toán :</span>
             <select name="pay_method">
-               <option value="cod">COD-Cash On Delivery</option>
-               <option value="momo">MoMo Wallet</option>
-               <option value="paypal">Paypal Wallet</option>
+               <option value="cod">Thanh toán khi nhận hàng</option>
+               <option value="momo">Ví MoMo</option>
+               <option value="paypal">Ví Paypal</option>
             </select>
          </div>
         
          <div class="inputBox">
-            <span>Shipping Method :</span>
+            <span>Phương thức vận chuyển :</span>
             <select name="shipping_method">
                <?php
                $method=mysqli_query($conn,"SELECT * FROM `shipping_method`");
@@ -204,19 +204,19 @@ if(isset($_POST['order_btn'])){
          </div>
 
          <div class="inputBox">
-            <span>Shipping Address :</span>
-            <input type="text" name="Address" required placeholder="Enter your delivery address" value="<?php
+            <span>Địa chỉ nhận hàng :</span>
+            <input type="text" name="Address" required placeholder="Nhập địa chỉ nhận hàng" value="<?php
              $Address= mysqli_query($conn,"SELECT Address FROM account WHERE Account_ID='$user_id'");
              $Address=mysqli_fetch_array($Address);
              echo $Address['Address'];?>">
          </div>
          
          <div class="inputBox">
-            <span>Your Note :</span>
-            <input type="text" name="Note" placeholder="Please enter your note">
+            <span>Ghi chú :</span>
+            <input type="text" name="Note" placeholder="Vui lòng nhập ghi chú của bạn">
          </div>
       </div>
-      <input type="submit" value="order now" class="btn" name="order_btn">
+      <input type="submit" value="Đặt hàng" class="btn" name="order_btn">
    </form>
 </section>
 

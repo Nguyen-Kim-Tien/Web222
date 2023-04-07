@@ -50,13 +50,13 @@ if(isset($_GET['delete_all'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>shopping cart</h3>
-   <p> <a href="home.php">HOME</a> / CART </p>
+   <h3>Giỏ hàng</h3>
+   <p> <a href="home.php">Trang chủ</a> / Giỏ hàng </p>
 </div>
 
 <section class="shopping-cart">
 
-   <h1 class="title">Products Added</h1>
+   <h1 class="title">Sách đã thêm</h1>
 
    <div class="box-container">
       <?php
@@ -81,20 +81,20 @@ if(isset($_GET['delete_all'])){
       $grand_total += $sub_total;
          }
       }else{
-         echo '<p class="empty">Your cart is empty</p>';
+         echo '<p class="empty">Giỏ hàng của bạn đang trống</p>';
       }
       ?>
    </div>
 
    <div style="margin-top: 2rem; text-align:center;">
-      <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from cart?');">delete all</a>
+      <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from cart?');">Xóa tất cả</a>
    </div>
 
    <div class="cart-total">
-      <p>grand total : <span>$<?php echo $grand_total; ?>/-</span></p>
+      <p>Tổng cộng : <span>$<?php echo $grand_total; ?>/-</span></p>
       <div class="flex">
-         <a href="books.php" class="option-btn">continue shopping</a>
-         <a href="checkout.php" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+         <a href="books.php" class="option-btn">Tiếp tục mua sắm</a>
+         <a href="checkout.php" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">Tiến hành thanh toán</a>
       </div>
    </div>
 

@@ -60,7 +60,7 @@ if(!isset($user_id)){
 
 <section class="reviews">
 
-   <h1 class="title">client's reviews</h1>
+   <h1 class="title">Đánh giá của khách hàng</h1>
 
    <div class="box-container">
 

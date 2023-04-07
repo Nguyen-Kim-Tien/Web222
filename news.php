@@ -33,13 +33,13 @@ if(!isset($user_id)){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>our shop</h3>
-   <p> <a href="home.php">HOME</a> / NEWS </p>
+   <h3>Tin tức</h3>
+   <p> <a href="home.php">Trang chủ</a> / Tin tức </p>
 </div>
 
 <section class="products">
 
-   <h1 class="title">latest news</h1>
+   <h1 class="title">Tin tức mới nhất</h1>
 
    <div class="box-container_news">
 
@@ -61,7 +61,7 @@ if(!isset($user_id)){
       <?php
          }
       }else{
-         echo '<p class="empty">No products added yet!</p>';
+         echo '<p class="empty">Chưa có sản phẩm nào được thêm vào!</p>';
       }
       ?>
    </div>
