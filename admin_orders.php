@@ -63,14 +63,14 @@ if(isset($_REQUEST['sort_by'])){
 
 <section class="orders">
 
-   <h1 class="title">placed orders</h1> 
+   <h1 class="title">đơn hàng</h1> 
    <form style="text-align:right;"action="admin_orders.php" method="GET">
     <select id="sort-by" name="sort_by">
-            <option value="all">All</option>
-            <option value="processing">Processing</option>
-            <option value="delivering">Delivering</option>
-            <option value="completed">Completed</option>
-            <option value="canceled">Canceled</option>
+            <option value="all">Tất cả</option>
+            <option value="processing">Đang xử lý</option>
+            <option value="delivering">Đang giao hàng</option>
+            <option value="completed">Hoàn thành</option>
+            <option value="canceled">Hủy</option>
     </select>
 <button id="sub-btn" type="submit"><i class="fas fa-filter"></i></button>
 </form>
@@ -82,8 +82,8 @@ if(isset($_REQUEST['sort_by'])){
       ?>
       <div class="box">
          <p> User id : <span><?php echo $fetch_orders['ACC_ID']; ?></span> </p>
-         <p> Placed on : <span><?php echo $fetch_orders['pay_date']; ?></span> </p>
-         <p> Name : <span><?php 
+         <p> Đặt lúc : <span><?php echo $fetch_orders['pay_date']; ?></span> </p>
+         <p> Tên : <span><?php 
          $Account_ID=$fetch_orders['ACC_ID'];
          $get_account=mysqli_query($conn,"SELECT* FROM `account` WHERE Account_ID='$Account_ID'");
          $get_account=mysqli_fetch_array($get_account);
@@ -91,8 +91,8 @@ if(isset($_REQUEST['sort_by'])){
          echo $name;
           ?></span> </p>
          <p> Email : <span><?php echo $get_account['Email']; ?></span> </p>
-         <p> Address : <span><?php echo $get_account['Address']; ?></span> </p>
-         <p> Total products : <span><?php 
+         <p> Địa chỉ : <span><?php echo $get_account['Address']; ?></span> </p>
+         <p> Tổng quan sản phẩm : <span><?php 
          $order_id=$fetch_orders['Order_ID'];
          $get_product=mysqli_query($conn,"SELECT* FROM `order_detail` WHERE ORDERID='$order_id'") or die ('query failed');
          if(mysqli_num_rows($get_product)>0) {
@@ -105,23 +105,23 @@ if(isset($_REQUEST['sort_by'])){
            }
          }
           ?></span> </p>
-         <p> Shipping method : <span><?php 
+         <p> Phương thức vận chuyển : <span><?php 
          $mid= $fetch_orders['METHOD_ID']; 
          $method=mysqli_query($conn,"SELECT * FROM `shipping_method` WHERE Method_ID='$mid'") or die ('query failed');
          $method=mysqli_fetch_array($method);
          echo $method['Name'];
           ?></span> </p>
-         <p> Total price : <span>$<?php echo $fetch_orders['Total_amount']. " + $".$method['Fee']; ?></span> </p>        
+         <p> Tổng giá : <span>$<?php echo $fetch_orders['Total_amount']. " + $".$method['Fee']; ?></span> </p>        
          <form action="" method="post">
             <input type="hidden" name="order_id" value="<?php echo $fetch_orders['Order_ID']; ?>">
             <select name="update_Status">
                <option value="" selected disabled><?php echo $fetch_orders['Status']; ?></option>
-               <option value="Processing">Processing</option>
-               <option value="Delivering">Delivering</option>
-               <option value="Cancelled">Cancelled</option>
+               <option value="Processing">Đang xử lý</option>
+               <option value="Delivering">Đang giao hàng</option>
+               <option value="Cancelled">Hủy</option>
             </select>
-            <input type="submit" value="update" name="update_order" class="option-btn">
-            <a href="admin_orders.php?delete=<?php echo $fetch_orders['Order_ID']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">delete</a>
+            <input type="submit" value="cập nhật" name="update_order" class="option-btn">
+            <a href="admin_orders.php?delete=<?php echo $fetch_orders['Order_ID']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">xóa</a>
          </form>
       </div>
       <?php

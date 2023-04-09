@@ -97,16 +97,16 @@ if(isset($_POST['update_product'])){
 
 <section class="add-products">
 
-   <h1 class="title">all shop products</h1>
+   <h1 class="title">quản lý sản phẩm</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add product | choose type</h3>
+      <h3>Thêm sản phẩm | Chọn thể loại</h3>
       <select name="product_type">
-               <option value="book">BOOK</option>
-               <option value="magazine">MAGAZINE</option>
+               <option value="book">Sách</option>
+               <option value="magazine">Tạp chí</option>
       </select>
       
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="submit" value="Thêm sách" name="add_product" class="btn">
       
    </form>
 
@@ -139,8 +139,8 @@ if(isset($_POST['update_product'])){
             echo "$".$price;
          }
           ?></div>
-         <a href="admin_products.php?update=<?php echo $fetch_products['Product_ID']; ?>" class="option-btn">update</a>
-         <a href="admin_products.php?delete=<?php echo $fetch_products['Product_ID']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+         <a href="admin_products.php?update=<?php echo $fetch_products['Product_ID']; ?>" class="option-btn">Cập nhật</a>
+         <a href="admin_products.php?delete=<?php echo $fetch_products['Product_ID']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">Xóa</a>
       </div>
       <?php
          }

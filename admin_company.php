@@ -98,14 +98,14 @@ if(isset($_POST['update_member'])){
 
 <section class="add-products">
 
-   <h1 class="title">Our Members</h1>
+   <h1 class="title">Thàh viên của nhóm</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add info</h3>
-      <input type="text" name="name" class="box" placeholder="Enter name" required>
-      <textarea style="background-color: var(--light-bg); border-radius: 0.5rem; margin: 1rem 0; padding: 1.2rem 1.4rem; color: var(--black);border: var(--border); font-size:1.8rem; width: 100%;" name="contact" cols="100" rows="5" placeholder="Enter a address for contacting" required></textarea>
+      <h3>thêm thông tin</h3>
+      <input type="text" name="name" class="box" placeholder="Nhập tên" required>
+      <textarea style="background-color: var(--light-bg); border-radius: 0.5rem; margin: 1rem 0; padding: 1.2rem 1.4rem; color: var(--black);border: var(--border); font-size:1.8rem; width: 100%;" name="contact" cols="100" rows="5" placeholder="Nhập địa chỉ cho phương thức liên lạc" required></textarea>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
-      <input type="submit" value="add info" name="add_info" class="btn">
+      <input type="submit" value="Thêm thông tin" name="add_info" class="btn">
    </form>
 
 </section>
@@ -130,8 +130,8 @@ if(isset($_POST['update_member'])){
       <div class="box">
          <img style="max-width:100%;" src="uploaded_img/<?php echo $fetch_member['img']; ?>" alt="">
          <div class="name"><?php echo $fetch_member['name']; ?></div>
-         <a href="admin_company.php?update=<?php echo $fetch_member['id']; ?>" class="option-btn">update</a>
-         <a href="admin_company.php?delete=<?php echo $fetch_member['id']; ?>" class="delete-btn" onclick="return confirm('delete this member?');">delete</a>
+         <a href="admin_company.php?update=<?php echo $fetch_member['id']; ?>" class="option-btn">cập nhật</a>
+         <a href="admin_company.php?delete=<?php echo $fetch_member['id']; ?>" class="delete-btn" onclick="return confirm('delete this member?');">xóa</a>
       </div>
       <?php
          }

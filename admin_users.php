@@ -82,7 +82,7 @@ if(isset($_GET['disable'])) {
 
 <section class="users">
 
-   <h1 class="title"> user accounts </h1>
+   <h1 class="title"> Tài khoản người dùng </h1>
 
    <div class="box-container">
       <?php
@@ -91,21 +91,21 @@ if(isset($_GET['disable'])) {
       ?>
       <div class="box">
          <p> User id : <span><?php echo $fetch_users['Account_ID']; ?></span> </p>
-         <p> First name : <span><?php echo $fetch_users['FName']; ?></span> </p>
-         <p> Last name : <span><?php echo $fetch_users['LName']; ?></span> </p>
+         <p> Tên : <span><?php echo $fetch_users['FName']; ?></span> </p>
+         <p> Họ : <span><?php echo $fetch_users['LName']; ?></span> </p>
          <p> Email : <span><?php echo $fetch_users['Email']; ?></span> </p>
-         <p> Start date : <span><?php echo $fetch_users['Start_date']; ?></span> </p>
+         <p> Ngày lập : <span><?php echo $fetch_users['Start_date']; ?></span> </p>
 
-         <a href="admin_users.php?delete=<?php echo $fetch_users['Account_ID']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete user</a>
+         <a href="admin_users.php?delete=<?php echo $fetch_users['Account_ID']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">xóa người dùng</a>
          <a  href="admin_users.php?disable=<?php echo $fetch_users['Account_ID']; ?>" onclick="return confirm('change stat this user?');" class="disable-btn"><?php if($fetch_users['Deleted']==0) {
-            echo "Disable";
+            echo "Vô hiệu hóa";
          }
          else {
-            echo "Enable";
+            echo "Cho phép";
          }
        ?></a>
-          <a href="admin_users_comment.php?id=<?php echo $fetch_users['Account_ID']; ?>" class="detail-btn">View review</a>
-          <a href="admin_users_order.php?id=<?php echo $fetch_users['Account_ID']; ?>" class="order-btn">View orders</a>
+          <a href="admin_users_comment.php?id=<?php echo $fetch_users['Account_ID']; ?>" class="detail-btn">xem nhận xét</a>
+          <a href="admin_users_order.php?id=<?php echo $fetch_users['Account_ID']; ?>" class="order-btn">xem đơn hàng</a>
          </div>
       <?php
          };

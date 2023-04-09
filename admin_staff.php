@@ -166,25 +166,25 @@ if(isset($_POST['update_staff'])){
 
 <section class="add-products">
 
-   <h1 class="title">All staff</h1>
+   <h1 class="title">Danh mục nhân viên</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add staff</h3>
-      <input style="width: 50%; float: left;" type="text" name="FName" class="box" placeholder="First name" required>
-      <input style="width: 50%; float: left;" type="text" name="LName" class="box" placeholder="Last name" required>
-      <input type="text" name="TelephoneNum" class="box" placeholder="Phone number" required>
-      <input type="text" name="Address" class="box" placeholder="Address" required>
+      <h3>thêm nhân viên</h3>
+      <input style="width: 50%; float: left;" type="text" name="FName" class="box" placeholder="Tên" required>
+      <input style="width: 50%; float: left;" type="text" name="LName" class="box" placeholder="Họ" required>
+      <input type="text" name="TelephoneNum" class="box" placeholder="Số điện thoại" required>
+      <input type="text" name="Address" class="box" placeholder="Địa chỉ" required>
 
       <input type="text" name="Email" class="box" placeholder="Email" required>
-      <input type="password" name="Password" class="box" placeholder="Password" required>
+      <input type="password" name="Password" class="box" placeholder="Mật khẩu" required>
 
       <select name="Role" class="box">
-      <option value="" selected disabled hidden>Role</option>
-         <option value="nhanvienthuong">Normal Staff</option>
-         <option value="nhanvienkho">Storage Staff</option>
+      <option value="" selected disabled hidden>Vai trò</option>
+         <option value="nhanvienthuong">Nhân viên bình thường</option>
+         <option value="nhanvienkho">Nhân viên kho</option>
       </select>
 
-      <input type="submit" value="add staff" name="add_staff" class="btn">
+      <input type="submit" value="thêm nhân viên" name="add_staff" class="btn">
    </form>
 
 </section>
@@ -192,7 +192,7 @@ if(isset($_POST['update_staff'])){
 <!-- product CRUD section ends -->
 
 <!-- show products  -->
-<h2 class="title">Normal Staff</h2>
+<h2 class="title">Nhân viên thường</h2>
 <section class="show-products">
 
    <div class="box-container">
@@ -209,24 +209,24 @@ if(isset($_POST['update_staff'])){
          <div class="price">
             <?php
             if($fetch_staff['Deleted']=='0') {
-                echo 'Available';
+                echo 'Có mặt';
             }
             else {
-                echo 'Disabled';
+                echo 'Vô hiệu hóa';
             }
             ?>
 
          </div>
-         <a href="admin_staff.php?update=<?php echo $fetch_staff['Account_ID']; ?>" class="option-btn">update</a>
+         <a href="admin_staff.php?update=<?php echo $fetch_staff['Account_ID']; ?>" class="option-btn">cập nhật</a>
          <a href="admin_staff.php?disable=<?php echo $fetch_staff['Account_ID']; ?>" class="disable-btn"><?php
          if($fetch_staff['Deleted']==1) {
-            echo "enable";
+            echo "cho phép";
          }
          else {
-            echo "disable";
+            echo "vô hiệu hóa";
          }
           ?></a>
-         <a href="admin_staff.php?delete=<?php echo $fetch_staff['Account_ID']; ?>" class="delete-btn" onclick="return confirm('delete this employee?');">delete</a>
+         <a href="admin_staff.php?delete=<?php echo $fetch_staff['Account_ID']; ?>" class="delete-btn" onclick="return confirm('delete this employee?');">xóa</a>
       </div>
       <?php
          }
@@ -237,7 +237,7 @@ if(isset($_POST['update_staff'])){
    </div>
 
 </section>
-<h2 class="title">Storage Staff</h2>
+<h2 class="title">Nhân viên kho</h2>
 <section class="show-products">
 
    <div class="box-container">
@@ -250,28 +250,28 @@ if(isset($_POST['update_staff'])){
       ?>
       <div class="box">
          <div class="name"><?php echo $fetch_staff['FName']. " ".$fetch_staff['LName']; ?></div>
-         <div class="name">Storage Staff</div>
+         <div class="name">Nhân viên kho</div>
          <div class="price">
             <?php
             if($fetch_staff['Deleted']=='0') {
-                echo 'Available';
+                echo 'Có mặt';
             }
             else {
-                echo 'Disabled';
+                echo 'Vô hiệu hóa';
             }
             ?>
 
          </div>
-         <a href="admin_staff.php?update=<?php echo $fetch_staff['Account_ID']; ?>" class="option-btn">update</a>
+         <a href="admin_staff.php?update=<?php echo $fetch_staff['Account_ID']; ?>" class="option-btn">Cập nhật</a>
          <a href="admin_staff.php?disable=<?php echo $fetch_staff['Account_ID']; ?>" class="disable-btn"><?php
          if($fetch_staff['Deleted']==1) {
-            echo "enable";
+            echo "cho phép";
          }
          else {
-            echo "disable";
+            echo "vô hiệu hóa";
          }
           ?></a>
-         <a href="admin_staff.php?delete=<?php echo $fetch_staff['Account_ID']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+         <a href="admin_staff.php?delete=<?php echo $fetch_staff['Account_ID']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">xóa</a>
       </div>
       <?php
          }

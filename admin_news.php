@@ -104,14 +104,14 @@ if(isset($_POST['update_news'])){
 
 <section class="add-products">
 
-   <h1 class="title">shop news</h1>
+   <h1 class="title">Quảng lý tin tức</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add news</h3>
-      <input type="text" name="title" class="box" placeholder="Enter title" required>
-      <textarea style="background-color: var(--light-bg); border-radius: 0.5rem; margin: 1rem 0; padding: 1.2rem 1.4rem; color: var(--black);border: var(--border); font-size:1.8rem; width: 100%;" name="content" cols="100" rows="8" placeholder="Enter content" ></textarea>
+      <h3>Đăng tin</h3>
+      <input type="text" name="title" class="box" placeholder="Nhập chủ đề" required>
+      <textarea style="background-color: var(--light-bg); border-radius: 0.5rem; margin: 1rem 0; padding: 1.2rem 1.4rem; color: var(--black);border: var(--border); font-size:1.8rem; width: 100%;" name="content" cols="100" rows="8" placeholder="Nhập nội dung" ></textarea>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
-      <input type="submit" value="add news" name="add_news" class="btn">
+      <input type="submit" value="Đăng tin" name="add_news" class="btn">
    </form>
 
 </section>
@@ -136,8 +136,8 @@ if(isset($_POST['update_news'])){
       <div class="box">
          <img style="max-width:100%;" src="uploaded_img/<?php echo $fetch_news['img']; ?>" alt="">
          <div class="name"><?php echo $fetch_news['title']; ?></div>
-         <a href="admin_news.php?update=<?php echo $fetch_news['id']; ?>" class="option-btn">update</a>
-         <a href="admin_news.php?delete=<?php echo $fetch_news['id']; ?>" class="delete-btn" onclick="return confirm('delete this news?');">delete</a>
+         <a href="admin_news.php?update=<?php echo $fetch_news['id']; ?>" class="option-btn">cập nhật</a>
+         <a href="admin_news.php?delete=<?php echo $fetch_news['id']; ?>" class="delete-btn" onclick="return confirm('delete this news?');">xóa</a>
       </div>
       <?php
          }
