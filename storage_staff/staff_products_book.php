@@ -205,23 +205,23 @@ if(isset($_POST['update_product'])){
 
 <section class="add-products">
 
-   <h1 class="title">shop books</h1>
+   <h1 class="title">quản lý Sách</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add book</h3>
-      <input type="text" name="name" class="box" placeholder="enter product name" required>
-      <input type="number" min="0" name="price" class="box" placeholder="enter product price" required>
-      <input type="number" min="0" name="discount_price" class="box" placeholder="enter discount price" required>
-      <input type="text" name="Publisher" class="box" placeholder="enter publisher name" required>
-      <input type="text" name="Author" class="box" placeholder="enter author name" required>
-      <input type="text" name="Publisher_year" class="box" placeholder="enter publish year" required>
-      <input type="text" name="Quantity_in_store" class="box" placeholder="enter quantity" required>
-      <input type="text" name="Category" class="box" placeholder="enter category" required>
+      <h3>thêm sách</h3>
+      <input type="text" name="name" class="box" placeholder="nhập tên sản phẩm" required>
+      <input type="number" min="0" name="price" class="box" placeholder="nhập giá sản phẩm" required>
+      <input type="number" min="0" name="discount_price" class="box" placeholder="nhập giá ưu đãi" required>
+      <input type="text" name="Publisher" class="box" placeholder="nhập nhà xuất bản" required>
+      <input type="text" name="Author" class="box" placeholder="nhập tên tác giả" required>
+      <input type="text" name="Publisher_year" class="box" placeholder="nhập năm xuất bản" required>
+      <input type="text" name="Quantity_in_store" class="box" placeholder="nhập số lượng" required>
+      <input type="text" name="Category" class="box" placeholder="nhập danh mục" required>
 
-      <textarea class="box" rows = "4" cols = "40" name = "description" placeholder="enter description" required></textarea>
+      <textarea class="box" rows = "4" cols = "40" name = "description" placeholder="nhập mô tả" required></textarea>
 
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="submit" value="thêm sản phẩm" name="add_product" class="btn">
    </form>
 
 </section>
@@ -257,8 +257,8 @@ if(isset($_POST['update_product'])){
             echo "$".$price;
          }
           ?></div>
-         <a href="staff_products_book.php?update=<?php echo $fetch_products['Product_ID']; ?>" class="option-btn">update</a>
-         <a href="staff_products_book.php?delete=<?php echo $fetch_products['Product_ID']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+         <a href="staff_products_book.php?update=<?php echo $fetch_products['Product_ID']; ?>" class="option-btn">cập nhật</a>
+         <a href="staff_products_book.php?delete=<?php echo $fetch_products['Product_ID']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">xóa</a>
       </div>
       <?php
          }

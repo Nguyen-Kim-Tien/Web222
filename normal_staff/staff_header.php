@@ -18,8 +18,8 @@ if(isset($message)){
       <a href="admin_page.php" class="logo">NORMAL STAFF <span>PANEL</span></a>
 
       <nav class="navbar">
-         <a href="staff_page.php">HOME</a>
-         <a href="staff_orders.php">ORDER</a>
+         <a href="staff_page.php">Trang chủ</a>
+         <a href="staff_orders.php">Đơn hàng</a>
       </nav>
 
       <div class="icons">
@@ -30,7 +30,7 @@ if(isset($message)){
       <div class="account-box">
          <p>username : <span><?php echo $_SESSION['staff_name']; ?></span></p>
          <p>email : <span><?php echo $_SESSION['staff_email']; ?></span></p>
-         <a href="../logout.php" class="delete-btn">logout</a>
+         <a href="../logout.php" class="delete-btn">Đăng xuất</a>
       </div>
 
    </div>

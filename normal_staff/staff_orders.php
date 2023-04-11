@@ -49,7 +49,7 @@ if(isset($_GET['delete'])){
 
 <section class="orders">
 
-   <h1 class="title">placed orders</h1>
+   <h1 class="title">quản lý đơn hàng</h1>
 
    <div class="box-container">
       <?php
@@ -59,17 +59,17 @@ if(isset($_GET['delete'])){
       ?>
       <div class="box">
          <p> user id : <span><?php echo $fetch_orders['ACC_ID']; ?></span> </p>
-         <p> placed on : <span><?php echo $fetch_orders['pay_date']; ?></span> </p>
-         <p> name : <span><?php 
+         <p> Tạo lúc : <span><?php echo $fetch_orders['pay_date']; ?></span> </p>
+         <p> Tên : <span><?php 
          $Account_ID=$fetch_orders['ACC_ID'];
          $get_account=mysqli_query($conn,"SELECT* FROM `account` WHERE Account_ID='$Account_ID'");
          $get_account=mysqli_fetch_array($get_account);
          $name=$get_account['FName']." ".$get_account['LName'];
          echo $name;
           ?></span> </p>
-         <p> email : <span><?php echo $get_account['Email']; ?></span> </p>
-         <p> address : <span><?php echo $get_account['Address']; ?></span> </p>
-         <p> total products : <span><?php 
+         <p> Email : <span><?php echo $get_account['Email']; ?></span> </p>
+         <p> Địa chỉ : <span><?php echo $get_account['Address']; ?></span> </p>
+         <p> Sản phẩm : <span><?php 
          $order_id=$fetch_orders['Order_ID'];
          $get_product=mysqli_query($conn,"SELECT* FROM `order_detail` WHERE ORDERID='$order_id'") or die ('query failed');
          if(mysqli_num_rows($get_product)>0) {
@@ -82,13 +82,13 @@ if(isset($_GET['delete'])){
            }
          }
           ?></span> </p>
-         <p> shipping method : <span><?php 
+         <p> Phương thức vận chuyển : <span><?php 
          $mid= $fetch_orders['METHOD_ID']; 
          $method=mysqli_query($conn,"SELECT * FROM `shipping_method` WHERE Method_ID='$mid'") or die ('query failed');
          $method=mysqli_fetch_array($method);
          echo $method['Name'];
           ?></span> </p>
-         <p> total price : <span>$<?php echo $fetch_orders['Total_amount']. " + $".$method['Fee']; ?></span> </p>        
+         <p> Tổng giá : <span>$<?php echo $fetch_orders['Total_amount']. " + $".$method['Fee']; ?></span> </p>        
          <form action="" method="post">
             <input type="hidden" name="order_id" value="<?php echo $fetch_orders['Order_ID']; ?>">
             <select name="update_Status">
@@ -97,8 +97,8 @@ if(isset($_GET['delete'])){
                <option value="Delivering">Delivering</option>
                <option value="Cancelled">Cancelled</option>
             </select>
-            <input type="submit" value="update" name="update_order" class="option-btn">
-            <a href="staff_orders.php?delete=<?php echo $fetch_orders['Order_ID']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">delete</a>
+            <input type="submit" value="cập nhật" name="update_order" class="option-btn">
+            <a href="staff_orders.php?delete=<?php echo $fetch_orders['Order_ID']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">xóa</a>
          </form>
       </div>
       <?php

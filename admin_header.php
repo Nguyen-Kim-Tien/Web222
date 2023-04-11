@@ -22,11 +22,11 @@ if(isset($message)){
          <a href="admin_products.php">Tất cả sản phẩm</a>
          <a href="admin_products_book.php">Sách</a>
          <a href="admin_products_magazine.php">Tạp chí</a>
-         <a href="admin_orders.php">ORDER</a>
-         <a href="admin_users.php">USER</a>
-         <a href="admin_staff.php">STAFF</a>
-         <a href="admin_news.php">NEW</a>
-         <a href="admin_company.php">COMPANY</a>
+         <a href="admin_orders.php">Đơn hàng</a>
+         <a href="admin_users.php">Người dùng</a>
+         <a href="admin_staff.php">Nhân viên</a>
+         <a href="admin_news.php">Tin tức</a>
+         <a href="admin_company.php">Công ty</a>
       </nav>
 
       <div class="icons">
