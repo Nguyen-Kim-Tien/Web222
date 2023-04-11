@@ -46,14 +46,14 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`Account_ID`, `FName`, `LName`, `TelephoneNum`, `Start_date`, `Address`, `Email`, `Password`, `ROLE_NO`, `Deleted`, `Image`) VALUES
-(18, 'tien', 'nguyen', '0904473064', '2022-12-02 13:42:36', '323, Pham Van Chieu, P14, Go Vap, TPHCM', '123@gmail.com', '1f2f7b6c22218522f8cb879939b5ed37', 4, 0, NULL),
-(19, 'Tien', 'Nguyen', '0923236277', '2022-12-02 13:47:20', '323, Pham Văn Chiêu', 'admin@gmail.com', '25f9e794323b453885f5181f1b624d0b', 1, 0, NULL),
-(22, 'Tien2', 'Nguyen', '0913704201', '2022-12-02 14:33:55', '323, Ly ThuonG kiet', 'staff1@gmail.com', '25f9e794323b453885f5181f1b624d0b', 3, 0, NULL),
-(34, 'Tien3', 'Nguyen', '0998876678', '2022-12-04 03:52:27', '66, Lê tèo, hcm', 'staff2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 2, 0, NULL),
-(28, 'Quyen', 'Tuan', '0117773889', '2022-12-04 22:18:05', 'Quan 1, Ho Chi Minh', 'quyen@gmail.com', '1b8d23600288e0277850eea3d7ec13ca', 4, 0, NULL),
-(31, 'Khang', 'Phan', '03730154', '2022-12-05 20:27:05', 'Kí túc xá khu C', 'khang@gmail.com.vn', '0e3367240684e2463cbe0daa0362138d', 4, 0, 'author-1.jpg'),
-(32, 'Quyen', 'Hiiii', '0373015428', '2022-12-13 01:37:05', NULL, 'quyen1@gmail.com', '25d55ad283aa400af464c76d713c07ad', 4, 0, NULL),
-(33, 'Duc', 'Huynh', '0373015428', '2022-12-13 11:47:56', NULL, 'duc@gmail.comm', '0e3367240684e2463cbe0daa0362138d', 4, 0, NULL);
+(18, 'tien', 'nguyen', '0904473064', '2022-12-02 13:42:36', '323, Pham Van Chieu, P14, Go Vap, TPHCM', '123@gmail.com', '1f2f7b6c22218522f8cb879939b5ed37', 4, 0, 'author-1.jpg'),
+(19, 'Tien', 'Nguyen', '0923236277', '2022-12-02 13:47:20', '323, Pham Văn Chiêu', 'admin@gmail.com', '25f9e794323b453885f5181f1b624d0b', 1, 0, 'author-1.jpg'),
+(22, 'Tien2', 'Nguyen', '0913704201', '2022-12-02 14:33:55', '323, Ly ThuonG kiet', 'staff1@gmail.com', '25f9e794323b453885f5181f1b624d0b', 3, 0, 'author-1.jpg'),
+(34, 'Tien3', 'Nguyen', '0998876678', '2022-12-04 03:52:27', '66, Lê tèo, hcm', 'staff2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 2, 0, 'author-1.jpg'),
+(28, 'Quyen', 'Tuan', '0117773889', '2022-12-04 22:18:05', 'Quan 1, Ho Chi Minh', 'quyen@gmail.com', '1b8d23600288e0277850eea3d7ec13ca', 4, 0, 'author-2.jpg'),
+(31, 'Khang', 'Phan', '03730154', '2022-12-05 20:27:05', 'Kí túc xá khu C', 'khang@gmail.com.vn', '0e3367240684e2463cbe0daa0362138d', 4, 0, 'author-3.jpg'),
+(32, 'Quyen', 'Hiiii', '0373015428', '2022-12-13 01:37:05', NULL, 'quyen1@gmail.com', '25d55ad283aa400af464c76d713c07ad', 4, 0, 'author-2.jpg'),
+(33, 'Duc', 'Huynh', '0373015428', '2022-12-13 11:47:56', NULL, 'duc@gmail.comm', '0e3367240684e2463cbe0daa0362138d', 4, 0, 'author-4.jpg');
 
 
 -- --------------------------------------------------------
@@ -72,20 +72,20 @@ CREATE TABLE `author` (
 --
 
 INSERT INTO `author` (`Author_ID`, `Fullname`) VALUES
-(4, 'Anna Piterson'),
-(5, 'Hensiry Qwee'),
-(6, 'Jimmy Gordon'),
-(7, 'Maria SerKiii'),
-(8, 'Haminton Leuis'),
-(9, 'Ass Miner'),
-(12, 'John Vince'),
-(13, 'David Blank'),
-(14, 'Alex Kandro'),
-(17, 'Kim Kardashian West'),
-(18, 'David Jones'),
-(19, 'Andro Coelho'),
-(20, 'Ali Santiagos'),
-(21, 'Robert T.Kiyosaki');
+(4, 'Tác giả 1'),
+(5, 'Tác giả 2'),
+(6, 'Tác giả 3'),
+(7, 'Tác giả 4'),
+(8, 'Tác giả 5'),
+(9, 'Tác giả 6'),
+(12, 'Tác giả 7'),
+(13, 'Tác giả 8'),
+(14, 'Tác giả 9'),
+(17, 'Tác giả 10'),
+(18, 'Tác giả 11'),
+(19, 'Tác giả 12'),
+(20, 'Tác giả 13'),
+(21, 'Tác giả 14');
 
 -- --------------------------------------------------------
 
@@ -110,9 +110,13 @@ INSERT INTO `book` (`Product_ID`, `Publish_year`, `Quantity_in_store`, `CATEG_ID
 (16, 2017, 972, 6),
 (17, 2015, 1, 6),
 (18, 2011, 298, 6),
-(19, 2010, 299, 7),
-(24, 2022, 281, 17),
-(27, 2022, 296, 16),
+(19, 2010, 299, 6),
+(21, 2023, 200, 16),
+(22, 2022, 200, 16),
+(23, 2023, 200, 16),
+(24, 2023, 200, 16),
+(27, 2022, 200, 16),
+(29, 2022, 200, 17),
 (31, 2020, 20, 18),
 (32, 2020, 499, 18);
 
@@ -276,46 +280,46 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`Order_ID`, `Status`, `Total_amount`, `Address`, `CODE_ID`, `ACC_ID`, `METHOD_ID`, `Note`, `pay_date`, `payment`) VALUES
-(22, 'Cancelled', 7, 'Kí túc xá khu A ', NULL, 18, 1, 'cảm ơn', '2022-12-04 01:52:19', ''),
-(23, 'Cancelled', 9, 'Kí túc xá khu B', NULL, 31, 1, 'note*', '2022-12-05 20:27:57', ''),
-(24, 'Processing', 22, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-07 12:16:18', ''),
-(25, 'Processing', 40, 'Kí túc xá khu AAA', NULL, 31, 3, 'note*', '2022-12-07 15:26:04', ''),
-(26, 'Completed', 20, 'Kí túc xá khu B', NULL, 31, 1, 'note*', '2022-12-07 15:29:59', ''),
-(27, 'Processing', 30, 'Kí túc xá khu B', NULL, 31, 1, 'note*', '2022-12-07 15:54:04', ''),
-(28, 'Processing', 14, 'Kí túc xá khu B', NULL, 31, 1, 'note*', '2022-12-07 20:05:57', ''),
-(30, 'Processing', 41, 'Kí túc xá khu A', NULL, 31, 1, '', '2022-12-09 00:30:53', ''),
-(31, 'Processing', 83, 'Kí túc xá khu A', NULL, 31, 1, 'Note*', '2022-12-09 00:49:32', ''),
-(32, 'Processing', 12, 'Kí túc xá khu A', 2, 31, 1, 'Note*', '2022-12-09 00:49:57', ''),
-(33, 'Processing', 12, 'Kí túc xá khu A', 2, 31, 1, 'Note*', '2022-12-09 00:50:19', ''),
-(36, 'Processing', 12, 'Kí túc xá khu A', 2, 31, 1, '', '2022-12-09 00:57:27', ''),
-(37, 'Processing', 12, 'Kí túc xá khu B', 2, 31, 1, 'abc', '2022-12-09 01:00:00', ''),
-(38, 'Processing', 71, 'Kí túc xá khu B', 2, 31, 1, 'moi', '2022-12-09 01:02:23', ''),
-(39, 'Processing', 71, 'Kí túc xá khu B', 2, 31, 1, 'abccc', '2022-12-09 01:03:56', ''),
-(40, 'Processing', 71, 'Kí túc xá khu B', 2, 31, 1, 'moi nhat', '2022-12-09 01:04:39', ''),
-(41, 'Processing', 71, 'Kí túc xá khu B', 2, 31, 1, 'abc', '2022-12-09 01:04:59', ''),
-(42, 'Processing', 71, 'Kí túc xá khu B', 2, 31, 1, 'moi nhat', '2022-12-09 01:06:10', ''),
-(43, 'Processing', 71, 'Kí túc xá khu B', 2, 31, 1, 'moi nhat', '2022-12-09 01:07:08', ''),
-(44, 'Processing', 71, 'Kí túc xá khu C', 2, 31, 1, 'moi nhat', '2022-12-09 01:08:41', ''),
-(45, 'Processing', 71, 'Kí túc xá khu C', 2, 31, 1, 'moi nhat', '2022-12-09 01:23:22', ''),
-(46, 'Processing', 71, 'Kí túc xá khu C', 2, 31, 1, 'moi nhat', '2022-12-09 01:30:35', ''),
-(47, 'Processing', 71, 'Kí túc xá khu C', 2, 31, 1, 'moi nhat', '2022-12-09 01:31:55', ''),
-(49, 'Processing', 21, 'Kí túc xá khu B', NULL, 31, 1, 'kjkj', '2022-12-09 01:35:48', ''),
-(50, 'Processing', 41, 'Kí túc xá khu B', 1, 31, 1, 'note*', '2022-12-09 03:51:09', ''),
-(51, 'Processing', 39, 'Kí túc xá khu B', 2, 31, 1, 'note*', '2022-12-09 13:40:42', ''),
-(54, 'Processing', 15, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-09 16:39:14', ''),
-(55, 'Processing', 24, 'Kí túc xá khu B', 3, 31, 1, 'bghuy', '2022-12-12 18:42:31', ''),
-(56, 'Processing', 8, 'Kí túc xá khu B', 5, 31, 1, 'note*', '2022-12-12 23:31:21', ''),
-(57, 'Processing', 30, 'Kí túc xá khu B', NULL, 31, 1, 'note((((((', '2022-12-12 23:34:05', ''),
-(58, 'Processing', 10, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-13 00:53:43', ''),
-(59, 'Processing', 10, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-13 00:54:56', ''),
-(61, 'Cancelled', 8, 'Kí túc xá khu A', 10, 32, 3, 'note*', '2022-12-13 01:38:04', ''),
-(62, 'Processing', 63, 'Kí túc xá khu B', 8, 31, 1, 'moi', '2022-12-13 11:21:55', ''),
-(63, 'Processing', 63, 'Kí túc xá khu B', 9, 31, 1, 'moi', '2022-12-13 11:23:51', ''),
-(64, 'Processing', 63, 'Kí túc xá khu B', 7, 31, 1, 'aaa', '2022-12-13 11:24:28', ''),
-(65, 'Processing', 63, 'Kí túc xá khu B', 7, 31, 1, 'aa', '2022-12-13 11:25:29', ''),
-(66, 'Processing', 63, 'Kí túc xá khu B', 7, 31, 1, 'aaa', '2022-12-13 11:26:06', ''),
-(67, 'Processing', 63, 'Kí túc xá khu B', 7, 31, 1, 'aaa', '2022-12-13 11:28:14', ''),
-(68, 'Processing', 14, 'Kí túc xá khu B', 8, 31, 1, 'note*', '2022-12-13 11:32:35', '');
+(22, 'Cancelled', 130000, 'Kí túc xá khu A ', NULL, 18, 1, 'cảm ơn', '2022-12-04 01:52:19', ''),
+(23, 'Cancelled', 256000, 'Kí túc xá khu B', NULL, 31, 2, 'note*', '2022-12-05 20:27:57', ''),
+(24, 'Processing', 220000, 'Kí túc xá khu B', NULL, 31, 2, '', '2022-12-07 12:16:18', ''),
+(25, 'Processing', 400000, 'Kí túc xá khu AAA', NULL, 31, 3, 'note*', '2022-12-07 15:26:04', ''),
+(26, 'Completed', 120000, 'Kí túc xá khu B', NULL, 31, 2, 'note*', '2022-12-07 15:29:59', ''),
+(27, 'Processing', 310000, 'Kí túc xá khu B', NULL, 31, 3, 'note*', '2022-12-07 15:54:04', ''),
+(28, 'Processing', 140000, 'Kí túc xá khu B', NULL, 31, 1, 'note*', '2022-12-07 20:05:57', ''),
+(30, 'Processing', 410000, 'Kí túc xá khu A', NULL, 31, 1, '', '2022-12-09 00:30:53', ''),
+(31, 'Processing', 83000, 'Kí túc xá khu A', NULL, 31, 1, 'Note*', '2022-12-09 00:49:32', ''),
+(32, 'Processing', 120000, 'Kí túc xá khu A', 2, 31, 1, 'Note*', '2022-12-09 00:49:57', ''),
+(33, 'Processing', 120000, 'Kí túc xá khu A', 2, 31, 2, 'Note*', '2022-12-09 00:50:19', ''),
+(36, 'Processing', 120000, 'Kí túc xá khu A', 2, 31, 2, '', '2022-12-09 00:57:27', ''),
+(37, 'Processing', 120000, 'Kí túc xá khu B', 2, 31, 1, 'abc', '2022-12-09 01:00:00', ''),
+(38, 'Processing', 71000, 'Kí túc xá khu B', 2, 31, 2, 'moi', '2022-12-09 01:02:23', ''),
+(39, 'Processing', 71000, 'Kí túc xá khu B', 2, 31, 1, 'abccc', '2022-12-09 01:03:56', ''),
+(40, 'Processing', 71000, 'Kí túc xá khu B', 2, 31, 2, 'moi nhat', '2022-12-09 01:04:39', ''),
+(41, 'Processing', 71000, 'Kí túc xá khu B', 2, 31, 1, 'abc', '2022-12-09 01:04:59', ''),
+(42, 'Processing', 71000, 'Kí túc xá khu B', 2, 31, 1, 'moi nhat', '2022-12-09 01:06:10', ''),
+(43, 'Processing', 71000, 'Kí túc xá khu B', 2, 31, 2, 'moi nhat', '2022-12-09 01:07:08', ''),
+(44, 'Processing', 71000, 'Kí túc xá khu C', 2, 31, 1, 'moi nhat', '2022-12-09 01:08:41', ''),
+(45, 'Processing', 71000, 'Kí túc xá khu C', 2, 31, 2, 'moi nhat', '2022-12-09 01:23:22', ''),
+(46, 'Processing', 71000, 'Kí túc xá khu C', 2, 31, 1, 'moi nhat', '2022-12-09 01:30:35', ''),
+(47, 'Processing', 71000, 'Kí túc xá khu C', 2, 31, 2, 'moi nhat', '2022-12-09 01:31:55', ''),
+(49, 'Processing', 210000, 'Kí túc xá khu B', NULL, 31, 1, 'kjkj', '2022-12-09 01:35:48', ''),
+(50, 'Processing', 410000, 'Kí túc xá khu B', 1, 31, 1, 'note*', '2022-12-09 03:51:09', ''),
+(51, 'Processing', 390000, 'Kí túc xá khu B', 2, 31, 1, 'note*', '2022-12-09 13:40:42', ''),
+(54, 'Processing', 150000, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-09 16:39:14', ''),
+(55, 'Processing', 240000, 'Kí túc xá khu B', 3, 31, 1, 'bghuy', '2022-12-12 18:42:31', ''),
+(56, 'Processing', 80000, 'Kí túc xá khu B', 5, 31, 1, 'note*', '2022-12-12 23:31:21', ''),
+(57, 'Processing', 300000, 'Kí túc xá khu B', NULL, 31, 1, 'note((((((', '2022-12-12 23:34:05', ''),
+(58, 'Processing', 100000, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-13 00:53:43', ''),
+(59, 'Processing', 100000, 'Kí túc xá khu B', NULL, 31, 1, '', '2022-12-13 00:54:56', ''),
+(61, 'Cancelled', 80000, 'Kí túc xá khu A', 10, 32, 3, 'note*', '2022-12-13 01:38:04', ''),
+(62, 'Processing', 63000, 'Kí túc xá khu B', 8, 31, 1, 'moi', '2022-12-13 11:21:55', ''),
+(63, 'Processing', 63000, 'Kí túc xá khu B', 9, 31, 1, 'moi', '2022-12-13 11:23:51', ''),
+(64, 'Processing', 63000, 'Kí túc xá khu B', 7, 31, 1, 'aaa', '2022-12-13 11:24:28', ''),
+(65, 'Processing', 63000, 'Kí túc xá khu B', 7, 31, 1, 'aa', '2022-12-13 11:25:29', ''),
+(66, 'Processing', 63000, 'Kí túc xá khu B', 7, 31, 1, 'aaa', '2022-12-13 11:26:06', ''),
+(67, 'Processing', 63000, 'Kí túc xá khu B', 7, 31, 1, 'aaa', '2022-12-13 11:28:14', ''),
+(68, 'Processing', 140000, 'Kí túc xá khu B', 8, 31, 1, 'note*', '2022-12-13 11:32:35', '');
 
 -- --------------------------------------------------------
 
@@ -421,20 +425,20 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`Thumbnail`, `Name`, `Product_ID`, `Price`, `Discount_price`, `Publisher`, `Description`, `Deleted`) VALUES
-('harry.jpg', 'Harry Potter And The Cursed Child', 13, 21, 9, 'Warner Bros', 'The first preview of the play took place a few days ago and the response was ECSTATIC – it had the audience spellbound, with a standing ovation at the end.', 0),
-('9781408855935.jpeg', 'Harry Potter and the Order of the Phoenix', 15, 30, 20, 'Warner Bros', 'Another good book from JK Rowling', 0),
-('9781408865453.jpg', 'Harry Potter And The Deathly Hallows', 16, 21, 18, 'Macmillan Publishers', 'Deathly Voldemort is coming', 0),
-('9780722532935_1.jpg', 'The Alchemist', 17, 15, 12, 'HarperCollins Publishers', 'A global phenomenon, The Alchemist has been read and loved by over 62 million readers', 0),
-('38313371._SY475_.jpg', 'The Witch Of Portobello', 18, 10, 3, 'Macmillan Publisher', 'Dream is endless, Paulo Coelho imagination is endless.', 0),
-('images.jpg', 'The Valkyries', 19, 20, 10, 'Macmillan Publisher', 'The Valkyries of God', 1),
-('INC_Cover_AndreaHenricks.jpg', 'INCLUSION', 21, 2, 1, 'PlayBoy', 'good Magazine', 0),
-('vogue.jpg', 'Vogue', 22, 10, 4, 'Vogue', 'good Magazine for woman', 0),
-('vogue3.jpg', 'Vogue 3', 23, 2, 1, 'Vogue', 'Another Magazine by Kendall Jenner', 0),
-('51orT80mDAL._AC_SY780_.jpg', 'Cristiano Ronaldo: The Biography', 24, 25, 10, 'Amazon', 'The Greatest Of All Times', 0),
-('61kr0x9ubYL.jpg', 'Foundation Mathematics for Computer Science: A Visual Approach', 27, 32, 30, 'Springer', 'Fundamentals of Computer ', 0),
-('1781913_13105328_3560017.jpg', 'JONES', 29, 4, 3, 'Vogue', 'Kim Story ', 0),
-('tải xuống.jpg', 'How to win friends and influence people', 31, 20, 10, 'nha xuat ban tre', 'aaa', 0),
-('rich-dad.jpg', 'Rich dad poor dad', 32, 30, 25, 'nha xuat ban tre', 'Rich Dad Poor Dad: What the Rich Teach Their Kids About Money - That the Poor and the Middle Class Do Not!\n\nPersonal finance author and lecturer Robert T. Kiyosaki developed his unique economic perspective from two very different influences - his two fathers.', 0);
+('AnhChangHobbit.png', 'Anh Chàng Hobbit', 13, 174000, 164000, 'J.R.R Tolkien', 'Câu chuyện của Anh Chàng Hobbit là một chuyến phiêu lưu, khi Bilbo Baggins bị cuốn vào chuyến phiêu lưu giành lại xứ sở của những người lùn. Chuyến đi ấy vốn chẳng bao giờ được cho là thích hợp với một Hobbit chỉ thích ăn thức ngon, ở chỗ đẹp. Nhưng rồi Bilbo đã tham gia, đã bị cuốn vào rồi có thể trở về. Chuyến phiêu lưu trở thành bài học về cuộc sống, về con người.', 0),
+('BoGia.jpg', 'Bố Già',15, 260000, 250500, 'Mario Puzo', 'Thế giới ngầm được phản ánh trong tiểu thuyết Bố Già là sự gặp gỡ giữa một bên là ý chí cương cường và nền tảng gia tộc chặt chẽ theo truyền thống mafia xứ Sicily với một bên là xã hội Mỹ nhập nhằng đen trắng, mảnh đất màu mỡ cho những cơ hội làm ăn bất chính hứa hẹn những món lợi kếch xù. Trong thế giới ấy, hình tượng Bố già được tác giả dày công khắc họa đã trở thành bức chân dung bất hủ trong lòng người đọc. Từ một kẻ nhập cư tay trắng đến ông trùm tột đỉnh quyền uy, Don Vito Corleone là con rắn hổ mang thâm trầm, nguy hiểm khiến kẻ thù phải kiềng nể, e dè, nhưng cũng được bạn bè, thân quyến xem như một đấng toàn năng đầy nghĩa khí.',0),
+('CuocDoiCuaPi.jpg', 'Cuộc Đời Của Pi', 16, 110000, 99500, 'Yann Martel', 'Sau vụ đắm tàu bi thảm, Pi, cậu bé 16 tuổi con một giám đốc sở thú cùng gia đình đi Canada, thấy mình là kẻ sống sót duy nhất trên một chiếc xuồng cứu nạn nhỏ bé dập dềnh giữa Thái Bình Dương. Cùng với một con ngựa vằn đau khổ (gẫy một chân), một con linh cẩu lông đốm độc ác liên tục kêu yip yip, một con đười ươi cái nôn ọe vì say sóng  và đặc biệt một con hổ Bengal nặng 450 pound, Pi đã lang thang trên đại dương suốt 227 ngày, hy vọng rồi tuyệt vọng, trải qua những điều hài hước nhất, kinh khủng nhất, hoang tưởng nhất, đáng sợ nhất...mà một con người có thể gặp trong đời.', 0),
+('XuCat.jpg', 'Xứ Cát', 17, 250000, 238500, 'Frank Herbert', 'Là một trong những cuốn tiểu thuyết khoa học giả tưởng bán chạy nhất mọi thời đại, Xứ Cát không chỉ là lựa chọn đối với những tín đồ của Chúa nhẫn, Chiến tranh giữa các vì sao… mà còn chinh phục độc giả đủ mọi lứa tuổi, mọi tầng lớp và sở thích bởi sự đa dạng và phức tạp của con người và không gian trong truyện, bởi sự tinh tế trong xây dựng tâm lý, bởi sự hấp dẫn, căng thẳng và bất ngờ của cốt truyện, bởi sự độc đáo và thú vị của khối lượng kiến thức khổng lồ cũng như bởi sự hấp dẫn trong những tư tưởng về tôn giáo, về tự do, về tình yêu, về sự sống và cái chết…', 0),
+('NhaGiaKim.jpg', 'Nhà Giả Kim', 18, 80000,69000, 'Paulo Coelho', 'Tiểu thuyết Nhà giả kim của Paulo Coelho như một câu chuyện cổ tích giản dị, nhân ái, giàu chất thơ, thấm đẫm những minh triết huyền bí của phương Đông. Trong lần xuất bản đầu tiên tại Brazil vào năm 1988, sách chỉ bán được 900 bản. Nhưng, với số phận đặc biệt của cuốn sách dành cho toàn nhân loại, vượt ra ngoài biên giới quốc gia, Nhà giả kim đã làm rung động hàng triệu tâm hồn, trở thành một trong những cuốn sách bán chạy nhất mọi thời đại, và có thể làm thay đổi cuộc đời người đọc.',0),
+('451DoF.jpg', '451 Độ F',19, 80000, 73800, 'Ray Bradbury', 'Hãy mường tượng một thế giới nơi truyền hình thống trị và văn chương ngấp nghé trên bờ tuyệt chủng, nơi thông tin nông cạn được tung hô còn tri thức và ý tưởng thì bị ruồng rẫy, nơi tàng trữ sách là phạm pháp, ta có thể bị bắt chỉ vì tản bộ trên vỉa hè, còn nhiệm vụ của những người lính không phải cứu hỏa mà là châm mồi cho những đám cháy…',0),
+('GiaoDucVaYNghiaCuocSong.jpg', 'Giáo Dục Và Ý Nghĩa Cuộc Sống',21,70000, 53900, 'J. Krishnamurti', 'Bằng lối hành văn khúc triết, gần gũi, J.Krishnamurti cho rằng dạy học không nên trở thành một nghề của những chuyên gia như nó đang là như vậy, bởi vì khi đó tình thương sẽ phai tàn, trong khi tình thương chính là yếu tố cốt lõi của quá trình phát triển toàn diện. Thông điệp cuốn sách đưa ra rất nhân văn: Tất cả chúng ta nhất thiết phải học cách trở thành người có lòng trắc ẩn, biết bằng lòng với những cái tối thiểu và tìm kiếm cái tối cao. Chỉ khi đó nhân loại mới thực sự được cứu rỗi. Đó chính là lý do Giáo Dục Và Ý Nghĩa Cuộc Sống trở thành tác phẩm có lượng phát hành cực kỳ ấn tượng trên thế giới suốt nhiều năm qua. ',0),
+('KinhNghiemVaGiaoDuc.jpg', 'Kinh Nghiệm Và Giáo Dục',22,80000, 70000, 'John Dewey', 'KINH NGHIỆM VÀ GIÁO DỤC (Experience and Education) của John Dewey là một cuốn sách mỏng được xuất bản năm 1938 dựa trên một bài nói chuyện do ông thực hiện cùng năm đó theo lời mời của Hội Kappa Delta Pi. Đây là lần thứ hai John Dewey được Kappa Delta Pi mời nói chuyện về giáo dục. Và mục đích của lần mời này đã được Kappa Delta Pi nêu như sau: Vì lợi ích của cách hiểu sáng sủa và một sự hiệp lực, Ban Giám đốc của Kappa Delta Pi đã đề nghị Tiến sĩ Dewey đề cập một số vấn đề tranh luận đang chia rẽ nền giáo dục Mỹ thành hai phe và do đó làm cho nền giáo dục này suy yếu vào thời điểm nó cần có trọn vẹn sức mạnh để hướng dẫn một dân tộc đang hoang mang để vượt qua những rủi ro do đổi thay xã hội.',0),
+('CamNangCauTrucTiengAnh.jpg', 'Cẩm Nang Cấu Trúc Tiếng Anh',23,75000, 66000, 'Trang Anh', 'Cuốn sách CẨM NANG CẤU TRÚC TIẾNG ANH gồm 25 phần, mỗi phần là một phạm trù kiến thức trong tiếng Anh được trình bày một cách ngắn gọn, đơn giản, cô đọng và hệ thống hoá dưới dạng sơ đồ, bảng biểu nhằm phát triển khả năng tư duy của người học và từ đó giúp người học nhớ kiến thức nhanh hơn và sâu hơn. Sau hầu hết các phần lí thuyết đều có 20-30 câu bài tập áp dụng để kiểm tra cũng như khắc sâu kiến thức cho người học. Tuy dày chưa đến 250 trang nhưng cuốn sách lại có thể bao trọn toàn bộ kiến thức từ đơn giản đến phức tạp cộng với cách tận dụng tối đa và áp dụng triệt để cách học tiếng Anh bằng sơ đồ tư duy.',0),
+('TiengAnhGenZ.jpg', 'Tiếng Anh GenZ',24, 80000, 72000, 'English Not Boring', 'Giống như một cuốn từ điển mini nhưng không mang nặng tính hàn lâm học thuật hay một tài liệu tham khảo to tát, Tiếng Anh GenZ sẽ mang đến cho bạn những cách giải nghĩa thú vị, những ẩn ý tiếng Anh hay ho và những funfact vui nhộn không đụng hàng ở bất cứ đâu…',0),
+('CungBanTruongThanh.jpg', 'Cùng Bạn Trưởng Thành',27,90000, 71200, 'Yi Yang', 'Nếu bạn đang tìm kiếm một người bạn đồng hành trong việc học tập ngoại ngữ và phát triển bản thân thì cuốn sách “Cùng bạn trưởng thành” chắc chắn là cuốn sách dành cho bạn. Đúng như tên gọi của nó, cuốn sách sẽ là người bạn sát cánh bên bạn mỗi ngày, ngoài ra còn truyền tải cảm hứng và thông điệp sống tích cực thông qua những trích dẫn ngắn song ngữ Trung - Việt, qua đó bạn có thể vừa trau dồi thêm kiến thức mới, vừa làm mới thế giới nội tâm của bản thân. Với ngoại hình nhỏ gọn và vô cùng xinh xắn, bạn cũng có thể dễ dàng sách mang theo bên mình để cuốn sách trở thành bạn đồng hành không thể thiếu trong cuộc sống và có thể thưởng thức bất cứ lúc nào bạn rảnh rỗi.',0),
+('TroChuyenVoiNhaVatLyThienVan.jpg', 'Trò Chuyện Với Nhà Vật Lý Thiên Văn Trịnh Xuân Thuận',29,100000, 94500, 'Trịnh Xuân Thuận', 'Sách là nội dung trả lời phỏng vấn của nhà vật lý thiên văn Trịnh Xuân Thuận về các vấn đề khoa học thiên văn, về cuộc đời, sở thích và những sự kiện đã dẫn Trịnh Xuân Thuận đến với thiên văn học.',0),
+('TuoiTreDangGiaBaoNhieu.jpg', 'Tuổi Trẻ Đáng Giá Bao Nhiêu',31,90000, 70000, 'Rosie Nguyễn', 'Tuổi trẻ đáng giá bao nhiêu? Bạn có thể tự trả lời được câu hỏi này không nhỉ? Tuổi trẻ được xem là lứa tuổi đẹp nhất của một đời người, thế nhưng có bao giờ khi tuổi xuân qua đi, bạn lại cảm thấy tiếc nuối vì những gì mà mình chưa làm được không? Với những lời tâm sự bình dị và gần gũi, cuốn sách Tuổi trẻ đáng giá bao nhiêu của tác giả Rosie Nguyễn sẽ giúp người đọc cảm nhận rõ nét nhất về tâm lý của những người trẻ trong xã hội ngày nay.',0),
+('LamChuTuoi20.jpg', 'Làm Chủ Tuổi 20', 32, 180000,169000, 'Dương Duy Bách', 'Làm chủ tuổi 20 được viết lại dựa trên những trải nghiệm trong cuộc sống của tác giả Dương Duy Bách – một người sớm tự lập và đạt được nhiều thành công ở tuổi 20. Ngoài câu chuyện của chính mình, tác giả còn ghi lại những bài học mà anh học được từ những người trẻ thành công khác và phân tích lý do khách quan khiến họ đạt được mục tiêu khi tuổi đời còn rất trẻ.',0);
 
 -- --------------------------------------------------------
 
@@ -464,11 +468,11 @@ INSERT INTO `review` (`Created_date`, `ACCID`, `Product_ID`, `Content`, `Rating`
 ('2022-12-13 10:11:50', 31, 17, 'hay day', 1, 12),
 ('2022-12-13 10:12:59', 31, 17, 'hay day', 1, 13),
 ('2022-12-13 10:15:08', 31, 17, 'aaa', 2, 14),
-('2022-12-13 10:16:01', 31, 17, 'aaa', 2, 15),
+('2022-12-13 10:16:01', 31, 17, 'Sách này đọc k thú vị lắm', 2, 15),
 ('2022-12-13 10:19:19', 28, 17, 'Shop nhiều sách thú vị', 2, 16),
-('2022-12-13 10:21:37', 31, 17, 'aaa', 2, 17),
-('2022-12-13 10:22:05', 28, 17, 'hello', 2, 18),
-('2022-12-13 10:22:21', 32, 17, 'hiiiii', 2, 19);
+('2022-12-13 10:21:37', 31, 17, 'Sách này có tập mới chưa', 2, 17),
+('2022-12-13 10:22:05', 28, 17, 'Giao hàng nhanh', 2, 18),
+('2022-12-13 10:22:21', 32, 17, 'Hi vọng sẽ có sách lập trinhg Python', 2, 19);
 
 -- --------------------------------------------------------
 
@@ -508,9 +512,9 @@ CREATE TABLE `shipping_method` (
 --
 
 INSERT INTO `shipping_method` (`Method_ID`, `Fee`, `Name`) VALUES
-(1, 20, 'Giao hàng tiết kiệm'),
-(2, 25, 'Giao hàng nhanh'),
-(3, 30, 'Hỏa tốc');
+(1, 10000, 'Giao hàng tiết kiệm'),
+(2, 25000, 'Giao hàng nhanh'),
+(3, 30000, 'Hỏa tốc');
 
 -- --------------------------------------------------------
 
