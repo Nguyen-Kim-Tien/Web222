@@ -263,7 +263,7 @@ INSERT INTO `news` (`id`, `img`, `title`, `content`, `date`) VALUES
 --
 
 CREATE TABLE `orders` (
-  `Order_ID` int(11) NOT NULL,
+  `Order_ID` int(11) PRIMARY KEY AUTO_INCREMENT,
   `Status` varchar(255) NOT NULL,
   `Total_amount` int(11) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
@@ -272,7 +272,7 @@ CREATE TABLE `orders` (
   `METHOD_ID` int(11) NOT NULL,
   `Note` varchar(255) DEFAULT NULL,
   `pay_date` datetime DEFAULT current_timestamp(),
-  `payment` varchar(30) NOT NULL
+  `payment` varchar(30)  default ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -616,7 +616,7 @@ ALTER TABLE `news`
 -- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`Order_ID`),
+  -- ADD PRIMARY KEY (`Order_ID`),
   ADD KEY `CODE_ID` (`CODE_ID`),
   ADD KEY `ACC_ID` (`ACC_ID`),
   ADD KEY `METHOD_ID` (`METHOD_ID`);
